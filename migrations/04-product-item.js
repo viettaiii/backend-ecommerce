@@ -18,10 +18,6 @@ module.exports = {
         onDelete: "cascade",
         onUpdate: "cascade",
       },
-      price: {
-        type: Sequelize.DOUBLE,
-        allowNull: false,
-      },
       qtyInStock: {
         type: Sequelize.INTEGER,
         defaultValue: 200,

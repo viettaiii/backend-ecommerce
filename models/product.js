@@ -13,8 +13,6 @@ module.exports = (sequelize, DataTypes) => {
         as: "category",
       });
 
-      this.hasOne(models.Discount, { foreignKey: "productId", as: "discount" });
-
       this.hasMany(models.ProductItem, {
         foreignKey: "productId",
         as: "productItem",
@@ -34,7 +32,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       price: {
         type: DataTypes.DOUBLE,
-        allowNull: false,
+      },
+      discount: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+      },
+      guarantee: {
+        type: DataTypes.INTEGER,
+        defaultValue: 12,
       },
     },
     { timestamps: true, sequelize, modelName: "Product" }

@@ -17,13 +17,22 @@ module.exports = {
       },
       desc: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         min: 6,
         max: 200,
+      },
+      discount: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+      },
+      guarantee: {
+        type: Sequelize.INTEGER,
+        defaultValue: 12,
       },
       price: {
         type: Sequelize.DOUBLE,
         allowNull: false,
+        
       },
       image: {
         type: Sequelize.STRING,

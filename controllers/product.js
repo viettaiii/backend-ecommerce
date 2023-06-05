@@ -3,7 +3,6 @@ const {
   Category,
   ProductConfig,
   VariationOption,
-  Discount,
   ProductItem,
 } = require("../models");
 const { NotFoundError } = require("../errors");
@@ -31,7 +30,6 @@ const getProducts = async (req, res) => {
           include: { model: VariationOption, as: "variationOption" },
         },
       },
-      "discount",
     ],
   });
   res.status(StatusCodes.OK).json({ products });

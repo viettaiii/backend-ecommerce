@@ -16,19 +16,19 @@ module.exports = {
     await queryInterface.bulkInsert("VariationOptions", [
       {
         variationId: 1,
-        value: "Red",
+        value: "red",
       },
       {
         variationId: 1,
-        value: "Blue",
+        value: "blue",
       },
       {
         variationId: 1,
-        value: "Green",
+        value: "green",
       },
       {
         variationId: 1,
-        value: "Yello",
+        value: "yellow",
       },
      
     ]);
