@@ -21,16 +21,23 @@ module.exports = (sequelize, DataTypes) => {
   Variation.init(
     {
       name: {
-        type: DataTypes.STRING,
-      },
-      name: {
         type: DataTypes.ENUM,
         values: ["color", "capacity"],
       },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
     },
-    {   timestamps: true,
-      createdAt: false, 
-      updatedAt: false, sequelize, modelName: "Variation" }
+    {
+      timestamps: true,
+      sequelize,
+      modelName: "Variation",
+    }
   );
   return Variation;
 };

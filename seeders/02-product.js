@@ -183,6 +183,7 @@ module.exports = {
       {
         id: 17,
         name: "Apple Watch SE 2022 LTE 44mm - Chính hãng VN/A",
+        desc: "Trả góp qua Home PayLater giảm thêm 5% tối đa 500.000đ.",
         image: "bla...",
         categoryId: 3,
         price: 19990000,
@@ -192,6 +193,7 @@ module.exports = {
       {
         id: 18,
         name: "Apple Watch S8 LTE 41mm viền thép dây cao su - Chính hãng VN/A",
+        desc: "Trả góp qua Home PayLater giảm thêm 5% tối đa 500.000đ.",
         image: "bla...",
         categoryId: 3,
         price: 19990000,
@@ -201,6 +203,7 @@ module.exports = {
       {
         id: 19,
         name: "Apple Watch S8 LTE 45mm viền thép dây cao su - Chính hãng VN/A",
+        desc: "Trả góp qua Home PayLater giảm thêm 5% tối đa 500.000đ.",
         image: "bla...",
         categoryId: 3,
         price: 21990000,
@@ -210,6 +213,7 @@ module.exports = {
       {
         id: 20,
         name: "Apple Watch S8 LTE 41mm viền thép dây thép - Chính hãng VN/A",
+        desc: "Trả góp qua Home PayLater giảm thêm 5% tối đa 500.000đ.",
         image: "bla...",
         categoryId: 3,
         price: 18490000,
@@ -218,6 +222,7 @@ module.exports = {
       {
         id: 21,
         name: "Apple Watch S8 LTE 45mm viền thép dây thép - Chính hãng VN/A",
+        desc: "Trả góp qua Home PayLater giảm thêm 5% tối đa 500.000đ.",
         image: "bla...",
         categoryId: 3,
         price: 20790000,

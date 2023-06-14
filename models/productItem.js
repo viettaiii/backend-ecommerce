@@ -20,11 +20,21 @@ module.exports = (sequelize, DataTypes) => {
   }
   ProductItem.init(
     {
-      image: {
-        type: DataTypes.STRING,
-      },
       qtyInStock: {
         type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      image: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
       },
     },
     { timestamps: true, sequelize, modelName: "ProductItem" }

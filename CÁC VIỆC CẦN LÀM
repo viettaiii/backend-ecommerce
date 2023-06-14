@@ -1,5 +1,0 @@
-	----- Các việc cần làm
-1.Setup với dự án ==> OK
-2.Create table (category , product , product-item,variation,variationOption ,productConfig) => OK
-3.Chuẩn bị dữ liệu cho các table (category , product , product-item,variation,variationOption ,productConfig) => OK
-4.Xử lí các chức năng (CRUD , search ) với product.

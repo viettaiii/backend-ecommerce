@@ -22,12 +22,11 @@ module.exports = (sequelize, DataTypes) => {
     {
       value: {
         type: DataTypes.STRING,
+        allowNull: false,
       },
     },
     {
       timestamps: true,
-      createdAt: false,
-      updatedAt: false,
       sequelize,
       modelName: "VariationOption",
     }

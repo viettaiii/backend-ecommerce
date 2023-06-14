@@ -12,14 +12,13 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
         allowNull: false,
-        min: 5,
         max: 200,
       },
       desc: {
         type: Sequelize.STRING,
         allowNull: true,
         min: 6,
-        max: 200,
+        max: 500,
       },
       discount: {
         type: Sequelize.INTEGER,
@@ -32,7 +31,6 @@ module.exports = {
       price: {
         type: Sequelize.DOUBLE,
         allowNull: false,
-        
       },
       image: {
         type: Sequelize.STRING,
@@ -49,9 +47,11 @@ module.exports = {
       },
       createdAt: {
         type: Sequelize.DATE,
+        allowNull: true,
       },
       updatedAt: {
         type: Sequelize.DATE,
+        allowNull: true,
       },
     });
   },

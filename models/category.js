@@ -14,7 +14,17 @@ module.exports = (sequelize, DataTypes) => {
   Category.init(
     {
       name: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM,
+        values: ["Iphone", "Macbook", "Apple Watch", "Ipad"],
+        allowNull: false,
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
       },
     },
     {

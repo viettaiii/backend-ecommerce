@@ -23,15 +23,14 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: {
         type: DataTypes.STRING,
+        allowNull: false,
+        max: 200,
       },
       desc: {
         type: DataTypes.STRING,
-      },
-      image: {
-        type: DataTypes.STRING,
-      },
-      price: {
-        type: DataTypes.DOUBLE,
+        allowNull: true,
+        min: 6,
+        max: 500,
       },
       discount: {
         type: DataTypes.INTEGER,
@@ -41,8 +40,36 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         defaultValue: 12,
       },
+      price: {
+        type: DataTypes.DOUBLE,
+        allowNull: false,
+      },
+      image: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
-    { timestamps: true, sequelize, modelName: "Product" }
+    {
+      hooks: {
+        beforeCount: function (options) {
+          if (this._scope.include && this._scope.include.length > 0) {
+            options.distinct = true;
+            options.col =
+              this._scope.col ||
+              options.col ||
+              `"${this.options.name.singular}".id`;
+          }
+
+          if (options.include && options.include.length > 0) {
+            options.include = null;
+          }
+        },
+      },
+
+      timestamps: true,
+      sequelize,
+      modelName: "Product",
+    }
   );
   return Product;
 };

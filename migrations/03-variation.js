@@ -13,6 +13,14 @@ module.exports = {
         type: Sequelize.ENUM,
         values: ["color", "capacity"],
       },
+      createdAt: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
     });
   },
   async down(queryInterface, Sequelize) {

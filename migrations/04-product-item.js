@@ -20,7 +20,7 @@ module.exports = {
       },
       qtyInStock: {
         type: Sequelize.INTEGER,
-        defaultValue: 200,
+        allowNull: false,
       },
       image: {
         type: Sequelize.STRING,
@@ -28,9 +28,11 @@ module.exports = {
       },
       createdAt: {
         type: Sequelize.DATE,
+        allowNull: true,
       },
       updatedAt: {
         type: Sequelize.DATE,
+        allowNull: true,
       },
     });
   },
