@@ -2,14 +2,19 @@
   "name": "01-car-rent",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/index",
+    "build-src": "npx babel src -d build --copy-files",
+    "build": "nodemon build/index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/node": "^7.22.6",
     "@sendgrid/mail": "^7.7.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.3",
@@ -34,6 +39,6 @@
   },
   "devDependencies": {
     "sequelize": "^6.31.1",
-    "sequelize-cli": "^6.6.0"
+    "sequelize-cli": "^6.6.1"
   }
 }
